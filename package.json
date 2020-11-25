@@ -1,0 +1,27 @@
+{
+  "name": "node-bck",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f3rjara/node-bck.git"
+  },
+  "keywords": [],
+  "author": "Fernando Jaramillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f3rjara/node-bck/issues"
+  },
+  "homepage": "https://github.com/f3rjara/node-bck#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
