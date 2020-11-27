@@ -1,0 +1,13 @@
+// Import Bootstrap
+@import "./../../../node_modules/bootstrap/scss/bootstrap";
+
+//libreries and variables
+@import "var/lander";
+
+//Base de fuentes
+@import "var/fonts";
+
+// Diseño del Header Y Footer
+@import "partials/header";
+@import "partials/footer";
+
