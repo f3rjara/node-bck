@@ -20,7 +20,7 @@ app.use((req, res) => {
 });
 
 // CONEXION A MONGO DB POR MONGO COMPAS
-mongoose.connect('mongodb://localhost:27017/dbHoteles', {
+mongoose.connect('mongodb+srv://admin:3eNfM8Vzr6elRebi@cluster.actfq.mongodb.net/dbHoteles?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
