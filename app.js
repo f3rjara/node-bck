@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const viewsRoutes = require('./routes/views');
@@ -20,7 +21,7 @@ app.use((req, res) => {
 });
 
 // CONEXION A MONGO DB POR MONGO COMPAS
-mongoose.connect('mongodb+srv://admin:3eNfM8Vzr6elRebi@cluster.actfq.mongodb.net/dbHoteles?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGIDB_URI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -35,4 +36,4 @@ mongoose.connect('mongodb+srv://admin:3eNfM8Vzr6elRebi@cluster.actfq.mongodb.net
     console.log(error);
 });
 
-app.listen(5500, () => console.log("listening port"));
+app.listen(process.env.PORT, () => console.log("listening port"));
