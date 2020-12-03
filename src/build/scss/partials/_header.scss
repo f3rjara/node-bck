@@ -1,5 +1,67 @@
 .navbar {
-    background: blue;
+    background: #fff;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
     padding-top: 1rem;
     padding-bottom: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    img.logo-explore {
+        max-width: 130px;
+    }
+    ul.navbar-nav {
+        li {
+            background: #fff;
+            border: 1px solid #b02e1a;
+            padding: 0 1rem;
+            border-radius: 5px;    
+            transition: 0.5s ease;    
+            width: 80%;
+            margin: 16px 10% auto;   
+            a {
+                color: #b02e1a;
+                font-family: 'Squada One', cursive;
+            }
+
+            &:hover{
+                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+                background: #b02e1a;
+                border: 1px solid #fff; 
+                transform: translateY(-3px);
+                a{
+                    color: #fff;
+                }
+            }
+        }
+        li.active{
+            box-shadow: 0px 4px 1px #b02e1a;
+        }
+    }
 }
+
+.navbar-toggler {
+    border: 1px solid;
+    border-color:  rgb(176, 46, 26) !important;
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(176, 46, 26)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+} 
+
+
+@media (min-width: 768px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        flex-grow: inherit;
+    }
+
+    ul.navbar-nav {
+        li {
+            width: fit-content !important;
+            margin: 5px !important;
+        }
+    }
+}
+
+

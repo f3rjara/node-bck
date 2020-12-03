@@ -4,7 +4,7 @@ const Hotel = require('./../db/models/hotel');
 const router = new express.Router();
 
 // GET DE HOTEL PARA OBTENER
-router.get('/api/hoteles', async (req, res) => {    
+router.get('/api/hotels', async (req, res) => {    
     try {
         const hoteles =  await Hotel.find({})
         res.send(hoteles)
@@ -17,7 +17,7 @@ router.get('/api/hoteles', async (req, res) => {
 });
 
 // POST DE HOTEL PARA ENVIAR
-router.post('/api/hoteles', async (req, res) => {    
+router.post('/api/hotels', async (req, res) => {    
     try {
         const dataHotel = req.body
         console.log(dataHotel)
@@ -33,8 +33,7 @@ router.post('/api/hoteles', async (req, res) => {
 
 
 // POST DE HOTEL PARA MOSTRAR UN HOTEL
-router.get('/api/hoteles/:id', async (req, res) => {    
-    
+router.get('/api/hotels/:id', async (req, res) => {   
     try {
         const id = req.params.id;
         const hotel =  await Hotel.findById(id)        
@@ -47,7 +46,6 @@ router.get('/api/hoteles/:id', async (req, res) => {
     } catch (error) {
         res.status(400).send(error);
     }
-    
 });
 
 

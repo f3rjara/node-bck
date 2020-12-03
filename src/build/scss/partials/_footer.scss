@@ -1,0 +1,24 @@
+footer {
+    bottom: 0;
+    width: 100%;
+    color: white;
+    position: relative;
+    background: rgb(176, 46, 26)  ;
+    clip-path: polygon(100% 10%, 100% 100%, 50% 100%, 0 100%, 0 10%, 50% 25%);    
+    div.content-footer{
+        padding-top: 180px;
+    }
+    div.footer-copyright{
+        background: rgb(156, 40, 23)  ;
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        clip-path: polygon(100% 0, 100% 100%, 49% 100%, 0 100%, 0 0, 50% 25%);
+        div.content-footer{
+            padding-top: 90px;
+            margin-top: 20px;
+        }
+    }
+}
