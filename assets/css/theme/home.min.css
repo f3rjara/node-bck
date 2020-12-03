@@ -1,1 +1,1 @@
-.carousel{position:relative;width:100% !important}.section-map{margin:30px auto}
+.carousel{position:relative;width:100% !important}.section-map{margin:30px auto}@media (min-width: 768px){div.map-hotels{position:relative}div.map-hotels::before{content:"The Best Hotels";position:absolute;font-family:fantasy;font-size:160px;top:70px;left:30px;width:30%;line-height:1;color:rgba(255,255,255,0.4)}}

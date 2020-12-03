@@ -62,7 +62,7 @@ gulp.task('part_html', () => {
 });	
 
 gulp.task('html', () => {
-	return gulp.src('./*.ejs')
+	return gulp.src('./**/*.ejs')
 		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(size({ gzip: true, showFiles: true }))
 		.pipe(gulp.dest('./../views'));

@@ -6,8 +6,11 @@ const router = new express.Router();
 // GET DE HOTEL PARA OBTENER
 router.get('/api/hotels', async (req, res) => {    
     try {
-        const hoteles =  await Hotel.find({})
-        res.send(hoteles)
+        const hotels =  await Hotel.find({})
+        res.render('hotels', { hotels })
+        //res.send(hoteles)
+        console.log(hotels)        
+
     } catch (error) {
         res.status(500).send({
             message: 'Error inesperado'
