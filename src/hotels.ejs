@@ -9,67 +9,52 @@
 <body>
     <%- include('./partials/header'); -%>
     
-    <section class="section-one mt-5">
-        <div class="container">
+    <section class="section-one section-slider">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col sm-12">
-                    <h2 class="text-center title-2">
-                        The Best Hotels
-                    </h2>
-                    <hr class="separator-title">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, vitae adipisci ipsam iusto odit tenetur minus, dolorum corrupti recusandae voluptas blanditiis at architecto quod reprehenderit neque officiis eum itaque magnam.
-                    </p>
+                <div class="col-xs-12 col sm-12 slider-hotels">
+                    <div class="content-slide">
+                        <h2 class="title-slider">
+                            Holidays to Cartagena
+                        </h2>
+                        <p>
+                            Located on the Caribbean Sea, its colonial houses, its ancient monasteries, cobblestone streets and walls that defended the inhabitants from pirate attacks are part of the essence of Cartagena. With squares, balconies full of flowers and pastel facades that change with the sunlight the capital of the department of Bolívar is ideal to surprise those who come to participate in congresses, conventions and world-class events.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <% if (hotels) { %>
-                <h2> <%- hotels.nombre; -%> </h2>
-            <% } %>
         </div>
     </section>
 
-    <section>
+    <div class="d-flex justify-content-center mb-5 mt-5 row" id="loader-img">
+        <img src="./img/loader.gif" alt="" srcset="">
+    </div>
+
+    <section class="not-hotels d-none">
         <div class="container">
             <div class="row">
-                <div class="card-deck">
-                    <div class="card col-4">
-                        <img class="card-img-top" src="../img/slide_1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-        
-                    <div class="card col-4">
-                        <img class="card-img-top" src="../img/slide_2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-        
-        
-                    <div class="card col-4">
-                        <img class="card-img-top" src="../img/slide_3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-
-                    <div class="card col-4">
-                        <img class="card-img-top" src="../img/slide_3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-        
+                <div class="col-sm-12 col-md-12">
+                    <h2 class="title-hotels">We're sorry</h2>
+                    <p>At this time we do not have active hotels.</p>
+                    <hr class="separator-title">
                 </div>
+                <div class="col-sm-12 d-flex justify-content-center found-content">
+                    <img src="./img/not-found-hotels.jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-hotels d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <h2 class="title-hotels">The Best Hotels</h2>
+                    <hr class="separator-title">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center row-hotels" id="row-hotels">
+                
             </div>
         </div>
         
@@ -79,6 +64,7 @@
         <%- include('./partials/footer'); -%>
         <%- include('./partials/script-body'); -%>
     </section>
+    <script src="../js/custom/hotels.js"></script>
     
 </body>
 </html>

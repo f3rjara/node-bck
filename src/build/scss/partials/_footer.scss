@@ -6,10 +6,32 @@ footer {
     background: rgb(176, 46, 26)  ;
     clip-path: polygon(100% 10%, 100% 100%, 50% 100%, 0 100%, 0 10%, 50% 25%);    
     div.content-footer{
-        padding-top: 180px;
+        padding-top: 280px;
+        h5.title-travel{
+            font-family: 'Squada One';
+            color: #fff;
+            line-height: 1;
+            font-size: 40px;
+        }
+        iframe {
+            min-height: 250px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+        img.logo-footer{
+            width: 80%;
+            margin-left: 5%;
+            margin-top: 10px;
+            filter: brightness(0.4)
+        }
     }
     div.footer-copyright{
         background: rgb(156, 40, 23)  ;
+        a{
+            text-decoration: none;
+            font-family: 'Squada One';
+            color: #fff;
+        }
     }
 }
 
@@ -17,8 +39,8 @@ footer {
     footer {
         clip-path: polygon(100% 0, 100% 100%, 49% 100%, 0 100%, 0 0, 50% 25%);
         div.content-footer{
-            padding-top: 90px;
-            margin-top: 20px;
+            padding-top: 145px;
+            margin-top: 40px;
         }
     }
 }

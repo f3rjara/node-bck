@@ -1,29 +1,112 @@
-.title-2 {
-    font-family: 'Squada One', cursive; 
-    color:  #b02e1a;
+
+
+.section-slider {
+    min-height: 600px;
+    width: 100%;
+    div.slider-hotels{
+        background-image: url('../../img/hotels.jpg');
+        position: relative;
+        min-height: 600px;
+        background-position: center left;
+        div.content-slide{
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80%;
+            padding: 1rem;
+            background: rgba(0,0,0,0.8);
+            border-left: none;
+            border-top: 8px solid #b02e1a;
+            h2{
+                text-transform: uppercase;
+                font-family: 'Squada One';
+                color: #fff;
+                margin-bottom: 10px;
+                font-size: 45px;
+            }
+            p{
+                color: #fff;
+                line-height: 1.6;
+            }
+        }
+    }
 }
 
-hr.separator-title{
-    width: 60px;
-    background: #b02e1a;
-    height: 4px;
-    position: relative;
-    margin: 10px auto;
-    padding: 0;
-    &::before, &::after {
-        position: absolute;
-        content: "";
-        width: 9px;
-        height: 5px;
-        top: -1px;
-        background: #b02e1a;
-        margin: 0;
-        padding: 0;
+
+.not-hotels {
+    margin-top: 30px;
+    
+    .title-hotels {
+        font-family: 'Squada One', cursive; 
+        color:  #b02e1a;
+        text-align: center;
+        font-size: 40px;
     }
-    &::before{
-        right:-13px;
-    }    
-    &::after{
-        left: -13px;
+    p{
+        text-align: center;
+        font-size: 20px;
+    }
+    div.found-content {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &::after{
+            position: absolute;
+            background: rgba(0,0,0,0.1);
+            width: 70%;
+            height: 20px;
+            left: 50%;
+            bottom: -40px;
+            content: "";
+            transform: translateX(-50%);
+            border-radius: 50%;
+            filter: blur(4px);
+        }
+    }
+}
+
+.section-hotels {
+    margin-top: 30px;
+    .title-hotels {
+        font-family: 'Squada One', cursive; 
+        color:  #b02e1a;
+        text-align: center;
+        font-size: 40px;
+    }
+    div.row-hotels {
+        margin-top: 30px;
+        .content-card {
+            padding: 1rem;
+            .card {
+                padding: 0;
+            }
+        }
+    }
+    
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .section-slider { 
+        div.slider-hotels{
+            min-height: 500px;
+            div.content-slide{
+                width: 40%;
+                border-left: 8px solid #b02e1a;
+                border-top: none;
+            }
+        }
+    }
+
+    .not-hotels {
+        div.found-content { 
+            img {
+                width: 40%;
+            }
+            &::after{
+                width: 250px;
+            }
+        }
     }
 }

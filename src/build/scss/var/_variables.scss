@@ -10,3 +10,30 @@ body {
 .section-one{
     padding-top: 80px;
 }
+
+
+hr.separator-title{
+    width: 60px;
+    background: #b02e1a;
+    height: 4px;
+    position: relative;
+    margin: 10px auto;
+    padding: 0;
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        width: 9px;
+        height: 5px;
+        top: -1px;
+        background: #b02e1a;
+        margin: 0;
+        padding: 0;
+    }
+    &::before{
+        right:-13px;
+    }    
+    &::after{
+        left: -13px;
+    }
+}
+

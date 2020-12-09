@@ -7,16 +7,12 @@ const router = new express.Router();
 router.get('/api/hotels', async (req, res) => {    
     try {
         const hotels =  await Hotel.find({})
-        res.render('hotels', { hotels })
-        //res.send(hoteles)
-        console.log(hotels)        
-
+        res.send(hotels)
     } catch (error) {
         res.status(500).send({
             message: 'Error inesperado'
         })
     }
-    
 });
 
 // POST DE HOTEL PARA ENVIAR

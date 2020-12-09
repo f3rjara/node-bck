@@ -4,6 +4,7 @@
     <%- include('partials/meta-head'); -%>
     <title>Explore | Home</title>
     <link rel="stylesheet" href="./css/theme/home.min.css">
+    </script>
 </head>
 <body>
     <%- include('partials/header'); -%>
@@ -31,16 +32,56 @@
             </a>
         </div>
     </section>
-    <!-- SECTION CONTENT CARD -->
+    <!-- SECTION CONTENT CARD -->    
     <section class="section-map">
         <div class="container-fluid">
-            <div class="row map-hotels">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125583.37723201008!2d-75.53754699414452!3d10.38335548370214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shoteles%20cartagena!5e0!3m2!1ses!2sco!4v1606969568249!5m2!1ses!2sco" width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="row map-hotels">  
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d125583.37723201008!2d-75.53754699414452!3d10.38335548370214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shoteles%20cartagena!5e0!3m2!1ses!2sco!4v1606969568249!5m2!1ses!2sco" width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>          
             </div>
         </div>
     </section>
-    
+    <!-- SECTION CONTENT TRAVELS -->    
+    <section class="section-travels">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h2 class="travel-title">
+                        What to expect from the adventure travel experts
+                    </h2>
+                    <hr class="separator-title">
+                    <br><p class="subtitle-p">There's a reason why 96% of customers say they would book an adventure holiday with us again.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3 img-travel">
+                    <img src="../img/montana.png"classs alt="">
+                    <hr class="separator-title">
+                    <h4>Unforgettable experiences</h4>
+                    <p>From big wows to hidden gems, our tours leave you feeling that you've really explored.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 img-travel">
+                    <img src="../img/guide_large.png"classs alt="">
+                    <hr class="separator-title">
+                    <h4>Expert local guides</h4>
+                    <p>Chosen for great knowledge of their country, and a passion to make your trip extraordinary.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 img-travel">
+                    <img src="../img/group_large.png"classs alt="">
+                    <hr class="separator-title">
+                    <h4>Small groups & private trips</h4>
+                    <p>Group tours average just 12 people & various private trip options are available too.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 img-travel">
+                    <img src="../img/like_large.png"classs alt="">
+                    <hr class="separator-title">
+                    <h4>We do the right thing</h4>
+                    <p>How we operate sets us apart; our flexible booking policy, loyalty scheme & sustainable approach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <%- include('partials/footer'); -%>
-    <%- include('partials/script-body'); -%>
+    <%- include('partials/script-body'); -%>    
+    <script src="./js/custom/index.min.js"></script>
 </body>
 </html>

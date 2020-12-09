@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 
-// RUTA DE INDEX
+// RUTA DE CONTACT
 router.get('/contact', (req, res) => {    
     res.render('contact')
 });
@@ -18,6 +18,11 @@ router.get('/contact', (req, res) => {
 // RUTA DE AGREGAR HOTELES
 router.get('/add-hotel', (req, res) => {    
     res.render('add-hotel')
+});
+
+// RUTA DE MOSTAR TODOS LOS HOTELES
+router.get('/hotels', (req, res) => {    
+    res.render('hotels')
 });
 
 
