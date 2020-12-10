@@ -2,14 +2,66 @@
 <html lang="en">
 <head>
     <%- include('partials/meta-head'); -%>
+    <link rel="stylesheet" href="../css/theme/new-hotel.min.css">
     <title>Explore | Add Hotel</title>
 </head>
 <body>
     <%- include('partials/header'); -%>
     <section class="section-one">
         <div class="container">
-            <div class="row">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias harum corrupti repudiandae quae quisquam expedita, accusantium tenetur ea perferendis voluptas pariatur sit? Recusandae nulla odit aspernatur, ut est aliquam. Quasi?
+            <div class="row mt-5">
+                <div class="col-sm-12 col-md-12">
+                    <h2 class="title-hotels">Create Hotels</h2>
+                    <hr class="separator-title">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5 row form-hotel">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <form id="FormNewHotel">
+                        <div class="form-group">
+                            <label for="NameHotel">Name Hotel</label>
+                            <input required type="text" class="form-control" id="NameHotel" placeholder="Enter Name Hotel">                            
+                        </div>
+                        <div class="form-group">
+                            <label for="CityHotel">City Hotel</label>
+                            <input required type="text" class="form-control" id="CityHotel" placeholder="Enter City Hotel">
+                        </div>
+                        <div class="form-group">
+                            <label for="AddressHotel">Address Hotel</label>
+                            <input required type="text" class="form-control" id="AddressHotel" placeholder="Enter Address Hotel">
+                        </div>
+                        <div class="form-group">
+                            <label for="LonHotel">Longitude Hotel</label>
+                            <input required type="text" class="form-control" id="LonHotel" placeholder="Enter Longitude Hotel">
+                        </div>
+                        <div class="form-group">
+                            <label for="LatHotel">Latitude Hotel</label>
+                            <input required type="text" class="form-control" id="LatHotel" placeholder="Enter Latitude Hotel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="StarHotel">Num Star Hotel</label>
+                            <input required type="number" min="1" max="5" class="form-control" id="StarHotel" placeholder="Enter Num Star Hotel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ShortHotel">Short Description Hotel</label>
+                            <input required type="text" class="form-control" id="ShortHotel" placeholder="Enter Short Description Hotel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="LongHotel">Long Description Hotel</label>                           
+                            <textarea required class="form-control"  id="LongHotel" placeholder="Enter Long Description Hotel" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="PhotoHotel">Enter Photo Hotel</label>
+                            <input required type="file" accept="image/png, image/jpeg" class="form-control-file" id="PhotoHotel">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -17,5 +69,6 @@
     
     <%- include('partials/footer'); -%>    
     <%- include('partials/script-body'); -%>
+    <script src="../js/custom/new-hotel.js"></script>
 </body>
 </html>

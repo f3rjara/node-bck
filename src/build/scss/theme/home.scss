@@ -6,11 +6,11 @@
         position: absolute;
         width: 60%;
         height: 100%;
-        top: 20%;
+        top: 45%;
         left: 5%;
         color: rgba(255,250,255,0.7);
-        font-family: fantasy;
-        font-size: 50px;
+        font-family: 'Alfa Slab One';
+        font-size: 40px;
         line-height: 1;
     }
 }
@@ -71,9 +71,9 @@
             top: 15%;
             left: 45%;
             color: rgba(255,250,255,0.7);
-            font-family: fantasy;
-            font-size: 170px;
-            line-height: 1;
+            font-family: 'Alfa Slab One';
+            font-size: 125px;
+            line-height: 1; 
         }
     }
     div.map-hotels{
@@ -81,8 +81,8 @@
         &::before  {
             content: "The Best Hotels";
             position: absolute;
-            font-family: fantasy;
-            font-size: 160px;
+            font-family: 'Alfa Slab One';
+            font-size: 120px;
             top: 70px;
             left: 100px;
             width: 29%;

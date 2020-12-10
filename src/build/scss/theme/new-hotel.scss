@@ -1,0 +1,22 @@
+.title-hotels {
+    font-family: 'Squada One', cursive;
+    color: #b02e1a;
+    text-align: center;
+    font-size: 40px;
+}
+
+div.form-hotel {
+    button {
+        background: #b02e1a;
+        text-transform: uppercase;
+        margin-left: 25%;
+        width: 50%;
+        transition: .5s ease-in-out;
+        &:hover {
+            background: #fff;
+            border: 2px solid #b02e1a;
+            color: #b02e1a;
+            font-weight: 800;
+        }
+    }
+}

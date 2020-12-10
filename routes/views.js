@@ -26,5 +26,10 @@ router.get('/hotels', (req, res) => {
 });
 
 
+// RUTA DE MOSTAR UN HOTEL
+router.get('/hotel/:id', (req, res) => {    
+    res.render('hotel')
+});
+
 
 module.exports = router;

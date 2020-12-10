@@ -31,17 +31,38 @@ function mostarHotels( hoteles ) {
     
     hoteles.forEach(hotel => {
         console.log( hotel )
+        var NumStar = "";
+        for (let index = 1; index <= 5; index++) {
+            if (index <= hotel.estrellas) {
+                NumStar += '<li> <img src="../img/star.svg"> </li>';
+            }
+            else{
+                NumStar += '<li> <img src="../img/no-star.svg"> </li>';
+            }
+        }
+        
         listHotels.innerHTML += `
             <div class="content-card col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="card ">
-                    <img class="card-img-top" src="../img/slide_1.jpg" alt="Card image cap">
+                <div class="card card-hotel">
+                    <a href="/hotel/${hotel._id}" class="img-hotel">
+                        <img class="card-img-top" src="../img/slide_1.jpg" alt="Card image cap">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">${hotel.nombre}</h5>
                         <p class="card-text">LO MEJORCITO DE LA ZONA</p>
                         <p class="card-text">
-                            ${hotel.estrellas}
+                            <ul class="star-hotel">
+                                ${NumStar}
+                            </ul>
                         </p>
-                        <p class="card-text"><small class="text-muted">${hotel.ciudad}</small></p>
+                        <p class="card-text">
+                            <small class="text-muted"> 
+                                ${hotel.ciudad} <strong> | From COP ${hotel.precio}  </strong> 
+                            </small>
+                        </p>
+                        <a href="/hotel/${hotel._id}" class="btn btn-read-more">
+                            Read More
+                        </a>
                     </div>
                 </div>
             </div>

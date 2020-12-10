@@ -83,6 +83,79 @@
                 padding: 0;
             }
         }
+
+        ul.star-hotel {
+            padding: 0;
+            margin: 0 30px auto;
+            text-align: center;
+            li {
+                text-decoration: none;
+                list-style: none;
+                display: inline;
+                width: 100%;
+                white-space: pre-wrap;
+                img {
+                    width: 30px;
+                }
+            }
+        } 
+
+        div.card-hotel{
+            transition: 1s ease-in-out; 
+            position: relative;
+            overflow: hidden;
+
+            div.card-body {
+                .card-title {
+                    font-family: 'Squada One', cursive; 
+                    color:  #b02e1a;
+                    font-size: 30px;
+                    margin: 0;
+                }
+                .card-text {
+                    font-family: 'PT Sans';
+                }
+                .text-muted {
+                    text-transform: uppercase;
+                }
+                .btn-read-more {
+                    background: #b02e1a;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin: 0 25% auto;
+                    width: 50%;
+                    font-family: 'Squada One', cursive; 
+                }
+            }
+
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                opacity: 0;
+                transition: 1s ease-in-out; 
+                width: 400px;
+                height: 10px;
+                transform: rotateZ(45deg);
+                z-index: 1;
+                top: 70px;
+                right: -180px;
+                background:  #b02e1a;
+            }
+            &:hover{
+                transform: translateY(-10px);
+                box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+                border-radius: 15px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    opacity: 1;
+                    box-shadow: 0px 15px 1px #b02e1a, 0px -15px 1px #b02e1a;
+                }
+            }
+
+        }
     }
     
 }
