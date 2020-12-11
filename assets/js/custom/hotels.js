@@ -45,11 +45,11 @@ function mostarHotels( hoteles ) {
             <div class="content-card col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="card card-hotel">
                     <a href="/hotel/${hotel._id}" class="img-hotel">
-                        <img class="card-img-top" src="../img/slide_1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../img/uploads/${hotel.ruta}" alt="Card image cap">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">${hotel.nombre}</h5>
-                        <p class="card-text">LO MEJORCITO DE LA ZONA</p>
+                        <p class="card-text">${hotel.short_desc}</p>
                         <p class="card-text">
                             <ul class="star-hotel">
                                 ${NumStar}

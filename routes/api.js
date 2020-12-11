@@ -40,13 +40,13 @@ router.post('/api/hotels', upload.single('ruta_foto'), async (req, res) => {
             'long': dataHotel.long,
             'lat': dataHotel.lat,
             'estrellas': dataHotel.estrellas,
+            'ruta': foto.filename,
             'short_desc': dataHotel.short_desc,
             'long_desc': dataHotel.long_desc,
-            'ruta_foto': foto.path,
         }
-        console.log(dataResult)
         
-        const hotel =  new Hotel( dataHotel )
+        const hotel =  new Hotel( dataResult )
+        console.log('Success!')
         await hotel.save()  
         res.send({
             message: 'Success!'
@@ -64,11 +64,11 @@ router.post('/api/hotels', upload.single('ruta_foto'), async (req, res) => {
 router.get('/api/hotel/:id', async (req, res) => {   
     try {
         const id = req.params.id;
-        const hotel =  await Hotel.findById(id)        
+        const hotel =  await Hotel.findById(id)  
         if( !hotel ){
             res.status(404).send();
         }
-        else {
+        else {            
             res.send(hotel)
         }
     } catch (error) {

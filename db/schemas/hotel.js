@@ -30,6 +30,10 @@ const  hotelSchema  =  new mongoose.Schema ( {
         type: Number,
         require: true
     },
+    "ruta" : {
+        type: String,
+        require: true
+    },
     "short_desc" : {
         type: String,
         require: true,
@@ -39,12 +43,7 @@ const  hotelSchema  =  new mongoose.Schema ( {
         type: String,
         require: true,
         trim: true
-    },
-    "ruta_foto" : {
-        type: String,
-        require: true,
-        trim: true
-    }
+    }    
 })
 
 module.exports = hotelSchema
